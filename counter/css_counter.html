@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>counter</title>
+    <style>
+        body {
+            background-color: #c293ff;
+        }
+
+        .container {
+            counter-reset: item;
+            border: 2px solid #ffffff;
+            margin-top: 2px;
+            width: 500px;
+        }
+
+        .start {
+            counter-reset: item 1;
+        }
+
+        .item1::before {
+            counter-increment: item;
+            content: counter(item) ".";
+        }
+
+        .item2::before {
+            counter-increment: item 2;
+            content: counter(item) ".";
+        }
+
+        ol {
+        counter-reset: item1;
+        list-style: none;
+        }
+        li {
+        display: block;
+        }
+        li:before {
+        counter-increment: item1;
+        content: counters(item1,".") " ";
+        }
+    </style>
+</head>
+
+<body>
+<!--起始编号为重置属性值+增量属性值-->
+<div class="container">
+    <p class="item1">a</p>
+
+    <p class="item1">b</p>
+
+    <p class="item1">c</p>
+</div>
+<div class="container">
+    <p class="item2">a</p>
+
+    <p class="item2">b</p>
+
+    <p class="item2">c</p>
+</div>
+<div class="container start">
+    <p class="item2">a</p>
+
+    <p class="item2">b</p>
+
+    <p class="item2">c</p>
+</div>
+<div class="container">
+    <ol>
+        <li>item</li>
+        <li>item
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item
+                    <ol>
+                        <li>item</li>
+                        <li>item</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</div>
+</body>
+</html>

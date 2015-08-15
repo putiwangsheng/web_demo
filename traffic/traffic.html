@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>traffic</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        .traffic-light {
+            margin-top: 50px;
+            margin-left: 200px;
+        }
+
+        .pillar {
+            width: 10px;
+            height: 300px;
+            background-color: #000000;
+            margin-left: 17px;
+        }
+
+        .black {
+            width: 45px;
+            height: 125px;
+            background-color: #000000;
+        }
+
+        .lights {
+            display: inline-block;
+        }
+
+        .light {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        .red {
+            background-color: red;
+            animation: stop 5s linear 1s forwards;
+        }
+
+        .yellow {
+            background-color: grey;
+            animation: ready 2s linear 6s;
+        }
+
+        .green {
+            background-color: grey;
+            animation: go 1s linear 8s forwards;
+        }
+
+        .car {
+            position: relative;
+            margin-left: 800px;
+            margin-top: -100px;
+            animation: run 2s linear 9.5s forwards;
+        }
+
+        @keyframes stop {
+            0%,40%,80%{
+                background-color: red;
+            }
+            20%,60%,100% {
+                background-color: grey;
+            }
+        }
+
+        @keyframes ready {
+            0% {
+                background-color: yellow;
+            }
+            90% {
+                background-color: yellow;
+            }
+        }
+
+        @keyframes go {
+            to {
+                background-color: #6eef7f;
+            }
+        }
+
+        @keyframes run {
+            0% {
+                left: 0px;
+            }
+            100% {
+                left: -800px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="traffic-light">
+    <div class="black">
+        <div class="lights">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+        </div>
+    </div>
+    <div class="pillar"></div>
+</div>
+
+<div class="car">
+    <img src="car.png">
+</div>
+</body>
+</html>

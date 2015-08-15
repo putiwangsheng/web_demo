@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        body {
+            background-color: #98f2dd;
+        }
+
+        .pyramid{
+            position: relative;
+            width: 140px;
+            animation: mytrans 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes mytrans {
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+
+        .tri {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+        }
+
+        .side1 {
+            border-width: 30px 30px 100px 30px;
+        }
+
+        .top-left {
+            border-color: transparent transparent #ba88fc transparent;
+            transform: rotate(12.69deg) skew(-5deg, -10deg);
+        }
+
+        .top-right {
+            border-color: transparent transparent #c293ff transparent;
+            transform: rotate(-12.69deg) skew(5deg, 10deg) translate(35%);
+
+        }
+    </style>
+</head>
+<body>
+<div class="pyramid">
+    <figure class="tri side1 top-left"></figure>
+    <figure class="tri side1 top-right"></figure>
+</div>
+</body>
+</html>
