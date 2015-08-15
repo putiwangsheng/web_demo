@@ -1,11 +1,11 @@
+@charset "UTF-8";
 html {
     height: 100%;
 }
 
 body {
-    /*background-color: antiquewhite;*/
     background-color: #000000;
-    /*ÉèÖÃ´¹Ö±¾ÓÖĞ*/
+    /*è®¾ç½®å‚ç›´å±…ä¸­*/
     align-items: center;
     justify-content: center;
     display: flex;
