@@ -9,7 +9,7 @@ $(function () {
             return;
         }
         $(step[currentstep]).addClass("clicked");
-        $($("p")).replaceWith("<p>" + (currentstep + 1) + "</p>");
+        $("p").replaceWith("<p>" + (currentstep + 1) + "</p>");
         currentstep++;
     });
     $('button[name="prev"]').click(function () {
@@ -17,7 +17,7 @@ $(function () {
             return;
         }
         $(step[currentstep-1]).removeClass("clicked");
-        $($("p")).replaceWith("<p>" + (currentstep - 1) + "</p>");
+        $("p").replaceWith("<p>" + (currentstep - 1) + "</p>");
         currentstep--;
     });
 });
