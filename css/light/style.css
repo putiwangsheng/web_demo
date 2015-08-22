@@ -1,0 +1,82 @@
+html {
+    height: 90%;
+}
+
+p {
+    animation: song 3s linear 6s forwards;
+    display: none;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: "kaiti";
+    position: relative;
+    width: 50%;
+    left: 100px;
+    top: 100px;
+}
+
+body {
+    animation: dark 5s linear forwards;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 97%;
+    position: relative;
+}
+
+.light {
+    width: 200px;
+    position: absolute;
+    right: 70px;
+    bottom: 30px;
+}
+
+.fire {
+    animation: light 2.5s linear 5s forwards;
+    width: 25px;
+    height: 30px;
+    background-color: #fad335;
+    border-radius: 50%;
+    position: absolute;
+    right: 165px;
+    bottom: 100px;
+    opacity: 0.4;
+}
+
+@keyframes dark {
+    0% {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    25% {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    75% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+@keyframes light {
+    /*0%{*/
+    /**/
+    /*}*/
+    100% {
+        box-shadow: 0 0 20px 25px rgba(247, 239, 85, 0.8), 0 0 30px 35px rgba(247, 239, 85, 0.4),
+        0 0 35px 45px rgba(247, 239, 85, 0.3),0 0 35px 65px rgba(247, 239, 85, 0.1);
+
+    }
+}
+
+@keyframes song {
+    0%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
