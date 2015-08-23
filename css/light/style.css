@@ -3,8 +3,7 @@ html {
 }
 
 p {
-    animation: song 3s linear 6s forwards;
-    display: none;
+    animation: song 5s linear 6s forwards;
     font-size: 1.5em;
     color: #ffffff;
     font-family: "kaiti";
@@ -12,6 +11,7 @@ p {
     width: 50%;
     left: 100px;
     top: 100px;
+    opacity: 0;
 }
 
 body {
@@ -30,13 +30,14 @@ body {
 
 .fire {
     animation: light 2.5s linear 5s forwards;
-    width: 25px;
-    height: 30px;
+    width: 15px;
+    height: 25px;
+    /*border: solid;*/
     background-color: #fad335;
     border-radius: 50%;
     position: absolute;
-    right: 165px;
-    bottom: 100px;
+    right: 170px;
+    bottom: 105px;
     opacity: 0.4;
 }
 
@@ -63,8 +64,8 @@ body {
     /**/
     /*}*/
     100% {
-        box-shadow: 0 0 20px 25px rgba(247, 239, 85, 0.8), 0 0 30px 35px rgba(247, 239, 85, 0.4),
-        0 0 35px 45px rgba(247, 239, 85, 0.3),0 0 35px 65px rgba(247, 239, 85, 0.1);
+        box-shadow: 0 0 20px 25px rgba(247, 239, 85, 1), 0 0 30px 35px rgba(247, 239, 85, 0.8),
+        0 0 35px 45px rgba(247, 239, 85, 0.6),0 0 35px 65px rgba(247, 239, 85, 0.4),0 0 35px 65px rgba(247, 239, 85, 0.1);
 
     }
 }
@@ -73,8 +74,11 @@ body {
     0%{
         opacity: 0.1;
     }
-    50%{
-        opacity: 0.5;
+    30%{
+        opacity: 0.4;
+    }
+    60%{
+        opacity: 0.7;
     }
     100%{
         opacity: 1;
