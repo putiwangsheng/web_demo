@@ -32,7 +32,6 @@ body {
     animation: light 2.5s linear 5s forwards;
     width: 15px;
     height: 25px;
-    /*border: solid;*/
     background-color: #fad335;
     border-radius: 50%;
     position: absolute;
@@ -45,24 +44,12 @@ body {
     0% {
         background-color: rgba(0, 0, 0, 0.1);
     }
-    25% {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-    50% {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    75% {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
     100% {
         background-color: rgba(0, 0, 0, 0.9);
     }
 }
 
 @keyframes light {
-    /*0%{*/
-    /**/
-    /*}*/
     100% {
         box-shadow: 0 0 20px 25px rgba(247, 239, 85, 1), 0 0 30px 35px rgba(247, 239, 85, 0.8),
         0 0 35px 45px rgba(247, 239, 85, 0.6),0 0 35px 65px rgba(247, 239, 85, 0.4),0 0 35px 65px rgba(247, 239, 85, 0.1);
@@ -73,12 +60,6 @@ body {
 @keyframes song {
     0%{
         opacity: 0.1;
-    }
-    30%{
-        opacity: 0.4;
-    }
-    60%{
-        opacity: 0.7;
     }
     100%{
         opacity: 1;
