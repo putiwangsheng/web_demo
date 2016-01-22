@@ -7,7 +7,8 @@ function getResult() {
     showError();
     //获取input元素，去掉首尾空字符存入数组
     var input = ($('hobbies').value).trim();
-    if(!input){
+
+    if (!input) {
         showError("输入不能为空");
         return;
     }
@@ -17,11 +18,16 @@ function getResult() {
     array = uniqArray(array);
     array = filterArray(array);
 
-    if(array.length > 10){
+    if (array.length > 10) {
         showError("输入的爱好不能超过10个");
         return;
     }
+
+    if ($('result')) {
+        $('body').removeChild($('result'));
+    }
     var newNode = document.createElement('p');
+    newNode.id = 'result';
 
     // newNode.innerHTML = array.toString();
     //以上一句和下面两句等效，即将新的元素追加到创建的新节点上
@@ -51,7 +57,7 @@ function uniqArray(arr) {
     for (var i = result.length - 1; i >= 0; i--) {
         var baseElement = result[i];
         for (var j = i - 1; j >= 0; j--) {
-            if(baseElement === result[j]){
+            if (baseElement === result[j]) {
                 result.splice(i, 1);
             }
         }
@@ -62,7 +68,7 @@ function uniqArray(arr) {
 function filterArray(arr) {
     var result = [];
     for (var i = 0; i < arr.length; i++) {
-        if(arr[i] !== " " && arr[i] !== ""){
+        if (arr[i] !== " " && arr[i] !== "") {
             result.push(arr[i]);
         }
     }
