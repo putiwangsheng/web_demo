@@ -1,0 +1,23 @@
+#time{
+    width: 25%;
+    margin-bottom: 1rem;
+}
+
+button{
+    background-color: #83d8f8;
+    color: #fff;
+    font-size: 15px;
+    font-family: "kaiti";
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+    padding: 4px;
+    margin: 2px;
+    box-shadow: -1px 1px 0 #6cd3f9;
+}
+
+#warning{
+    color: red;
+    font-family: kaiti;
+    font-size: 13px;
+}
